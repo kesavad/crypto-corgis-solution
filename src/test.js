@@ -17,24 +17,24 @@ describe("Greeter", function() {
         testSettings.contractName :
         (new URL(window.location.href)).searchParams.get("contractName");
       contract = await near.loadContract(contractName, {
-        // NOTE: This configuration only needed while NEAR is still in development
-        // View methods are read only. They don't modify the state, but usually return some value.
-        viewMethods: ["hello"],
-        // Change methods can modify the state. But you don't receive the returned value when called.
-        changeMethods: [],
+        viewMethods: ["totalSupply", "balanceOf", "allowance", "ownerOf", "name", "symbol", "getCorgisByOwner", "getCorgi", "getSender", "generateRandomDna", "generateRandomColorHex"],
+        changeMethods: ["init", "transfer", "approve", "transferFrom", "createRandomCorgi", "takeOwnership", "setCorgi", "setCorgisByOwner", "setBalance"],
         sender: accountId
       });
     });
 
     // Multiple tests can be described below. Search Jasmine JS for documentation.
-    describe("simple", function() {
+    describe("Tokens", function() {
       beforeAll(async function() {
         // There can be some common setup for each test.
+        contract.init({
+          initialOwner: accountId
+        })
       });
 
-      it("get hello message", async function() {
-        const result = await contract.hello();
-        expect(result).toBe("Hello, world");
+      it("gets the total supply", async function() {
+        const result = await contract.totalSupply();
+        expect(result).toBe("420");
       });
   });
 });

@@ -1,5 +1,5 @@
 (function() {
-    const CONTRACT_NAME = 'tater.one'; /* TODO: fill this in! */
+    const CONTRACT_NAME = 'two.taters'; /* TODO: fill this in! */
     const DEFAULT_ENV = 'development';
 
     function getConfig(env) {

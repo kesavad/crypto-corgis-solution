@@ -10,8 +10,28 @@ async function doInitContract() {
   window.near = await nearlib.dev.connect(nearConfig);
 
   window.contract = await near.loadContract(nearConfig.contractName, {
-    viewMethods: ["totalSupply", "balanceOf", "allowance", "ownerOf", "name", "symbol", "getCorgisByOwner", "getCorgi", "getSender", "generateRandomDna", "generateRandomColorHex"],
-    changeMethods: ["init", "transfer", "approve", "transferFrom", "createRandomCorgi", "takeOwnership", "setCorgi", "setCorgisByOwner", "setBalance"],
+    viewMethods: [
+      "totalSupply",
+      "balanceOf",
+      "allowance",
+      "ownerOf",
+      "name",
+      "symbol",
+      "getCorgisByOwner",
+      "getCorgi",
+      "getSender",
+      "generateRandomDna",
+      "generateRandomColorHex"],
+    changeMethods: [
+      "init",
+      "transfer",
+      "approve",
+      "transferFrom",
+      "createRandomCorgi",
+      "takeOwnership",
+      "setCorgi",
+      "setCorgisByOwner",
+      "setBalance"],
     sender: nearlib.dev.myAccountId
   });
 }
