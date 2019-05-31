@@ -1,6 +1,6 @@
 (function() {
     const CONTRACT_NAME = 'two.taters'; /* TODO: fill this in! */
-    const DEFAULT_ENV = 'development';
+    const DEFAULT_ENV = 'local';
 
     function getConfig(env) {
         switch (env) {

@@ -43,7 +43,7 @@ function sleep(time) {
 }
 
 window.nearInitPromise = doInitContract().then(()=>{
-  ReactDOM.render( < Tokens contract={contract} / > ,
+  ReactDOM.render( <Tokens contract={contract} /> ,
     document.getElementById('tokens')
   );
 }).catch(console.error);
