@@ -114,35 +114,6 @@ export default class Tokens extends Component {
 // }
 
 class Corgi extends Component {
-
-
-
-// .corgi_face:: before {
-//   content: "";
-//   display: block;
-//   background: #fcd677;
-//   width: 48px;
-//   height: 40px;
-//   position: absolute;
-//   right: 0;
-//   border - radius: 0 40px 0px 16px;
-//   z - index: 1;
-// }
-
-// .corgi_face:: after {
-//   content: "";
-//   display: block;
-//   background: #fcd677;
-//   width: 32px;
-//   height: 32px;
-//   position: absolute;
-//   left: 0;
-//   border - radius: 32px 0px 32px 0px;
-//   z - index: 0;
-// }
-
-
-
   render () {
     let specificColor = { backgroundColor: this.props.color };
     return (

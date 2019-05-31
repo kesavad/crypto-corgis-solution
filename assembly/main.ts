@@ -27,7 +27,6 @@ let corgis = collections.map<string, Corgi>("c");
 let corgisByOwner = collections.map<string, CorgiArray>("co");
 
 export function login():void {
-
 }
 
 export function balanceOf(owner: string): u64 {
@@ -137,13 +136,6 @@ export function createRandomCorgi(name: string, seed: i32): Corgi {
 export function getCorgi(tokenId: string): Corgi {
   return corgis.get(tokenId);
 }
-
-// export function getAllCorgis():Array<string> {
-//   for (let i=0;i<corgis.values.length;i++) {
-
-//   }
-//   return corgis.values;
-// }
 
 export function setCorgi(corgi: Corgi): void {
   corgis.set(corgi.dna, corgi);
